@@ -1,0 +1,23 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  audit:
+    runs-on: macos-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Homebrew
+        uses: Homebrew/actions/setup-homebrew@main
+
+      - name: brew style
+        run: brew style --cask Casks/spark-plug.rb
+
+      - name: brew audit
+        run: brew audit --cask --new --online Casks/spark-plug.rb
