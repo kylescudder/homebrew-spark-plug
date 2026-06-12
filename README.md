@@ -1,18 +1,9 @@
-# Kylescudder Spark-plug
+# Moved
 
-## How do I install these formulae?
+This tap is retired. Spark Plug now lives in the consolidated tap:
 
-`brew install kylescudder/spark-plug/<formula>`
-
-Or `brew tap kylescudder/spark-plug` and then `brew install <formula>`.
-
-Or, in a `brew bundle` `Brewfile`:
-
-```ruby
-tap "kylescudder/spark-plug"
-brew "<formula>"
+```sh
+brew untap kylescudder/spark-plug
+brew tap kylescudder/tap
+brew install --cask spark-plug
 ```
-
-## Documentation
-
-`brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
